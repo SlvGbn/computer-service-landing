@@ -1,0 +1,35 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstColumn > img {
+    width: 100%;
+    max-width: 4em;
+}
+
+.firstColumn > p {
+    font-size: 0.7rem;
+    font-weight: bolder;
+}
+
+.thirdColumn > div {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.thirdColumn > div > a > img {
+    border-radius: 20%;
+}
+
+.secondColumn a {
+    color: black;
+}

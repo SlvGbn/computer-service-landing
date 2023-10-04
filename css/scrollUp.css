@@ -1,0 +1,31 @@
+.scrollUp {
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+    opacity: .6;
+    visibility: hidden;
+}
+
+.scrollUp.visible {
+    visibility: visible;
+}
+
+.scrollUp > a {
+    background-color: MediumSlateBlue;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrollUp > a > img {
+
+  height: 100%;
+  max-height: 3em;
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="Utf-8">
+        <title>
+            Компуктер Сервис
+        </title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/modal.css">
+        <link rel="stylesheet" href="./css/popup.css">
+        <link rel="stylesheet" href="./css/scrollUp.css">
+        <script>
+            const imgPath = "./image/";
+            const srcs = ["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg"];
+            
+            function setSlide(index) {
+                const image = document.createElement("img");
+
+                image.src = imgPath + srcs[index];
+                const slides = document.querySelector(".slides");
+                slides.innerHTML = "";
+                slides.appendChild(image);
+            }
+
+            window.addEventListener("load", () => {
+                let number = 0;
+                setSlide(number);
+                
+                const buttonLeft = document.querySelector(".left");
+                buttonLeft.addEventListener("click", () => {
+                    number -= 1;
+                    if (number < 0) number = srcs.length - 1;
+                    setSlide(number);
+                })
+
+                const buttonRight = document.querySelector(".right");
+                buttonRight.addEventListener("click", () => {
+                    number += 1;
+                    if (number > srcs.length - 1) number = 0;
+                    setSlide(number);
+                })
+
+              /*  Слава.пойтиПопить("пивко");
+                create - создать 
+                query - запрос
+                append - прибавить
+                add - добавить
+
+                row - ряд, строка
+                column - столбец
+                direction - направление
+                align - выравнивание
+                item - предмет, элемент
+                justify - распределить
+                gap - зазор
+
+                first - первый
+                second - второй
+                third - третий
+                forth - четвертый
+                fifth - пятый
+                one - один
+                two - два
+                three -три
+                four - четыре
+                five - пять 
+
+                постоянная ссылка класснаяКнопка = документ.создайЭлемент("кнопка");
+                потсоянная ссылка слайдШоу = документ.найтиПоСелектору("#слайдШоу");
+                слайдШоу.добавитьПотомка(класснаяКнопка);
+
+                берем ссылку
+                берем элемент
+                в ссылке создаем подвкладку в виде элемента выше
+                */
+
+
+                srcs.forEach( (s, i) => {
+
+                    const pagination = document.querySelector(".pagination");
+                    const paginationButton = document.createElement("button");
+                    pagination.appendChild(paginationButton);
+
+                    paginationButton.addEventListener("click", () => {
+                        number = i;
+                        setSlide(number);
+                    })
+                })
+
+                const buttonHamburger = document.querySelector("#buttonHamburger");
+                buttonHamburger.addEventListener("click", () => {
+                    const modal = document.querySelector(".modal");
+                    modal.style.visibility = "visible";
+                    const menu = document.querySelector(".modal > .menu");
+                    menu.classList.add("show");
+
+                    function hideMenu() {
+                        menu.classList.remove("show");
+                        modal.style.visibility = "hidden";
+                    }
+
+                    const exit = document.querySelector("#exit");
+                    exit.addEventListener("click", hideMenu);
+
+                    modal.addEventListener("click" , hideMenu);
+                    
+                    menu.addEventListener("click", (event) => {
+                        event.stopPropagation();
+                    })
+
+                    const links = document.querySelectorAll(".menu a");
+                    links.forEach((a) => {
+                        a.addEventListener("click", hideMenu);
+                    })
+                })
+            })
+            window.addEventListener("scroll", () => {
+                const scrollUp = document.querySelector(".scrollUp");
+                const st = document.documentElement.scrollTop;
+                if (st > 400) {
+                    scrollUp.classList.add("visible");
+                }
+                else {
+                    scrollUp.classList.remove("visible");
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <popup class="popup">
+            <button class="news" onclick="document.location='../guess/novosti/qweOne.html'">
+                <h3>Новости Таркова</h3>
+                <p> Обсалютно бесплатный новостной ресурс!</p>
+                <p> У нас весело!</p>
+                <p> Присоединяйтесь к Нам, не пожалеете!</p>
+            </button>
+            <button class="advertising">
+                <h3>Здесь могла быть Ваша реклама!</h3>
+                <img src="./image/ava.jpg">
+            </button>
+        </popup>
+        <div class="modal">
+            <div class="menu">
+                <button id="exit">
+                    <img src="./image/exit.jpg">
+                </button>
+                <div class="head">
+                    <img src="./image/ava2.jpg">
+                    <h2> Compukter <br>Servis</h2>
+                </div>
+                <a href="#header">Главная</a>
+                <a href="#confidence">Наши приемущества</a>
+                <a href="#price">Стоимость услуг</a>
+                <div class="spacer"></div>
+                <div class="endMenu">
+                    <p>+7(888)228 88 28</p>
+                    <div>
+                        <a href="https:/vk.com"><img class="icon" src="./image/vk.png"></a>
+                        <a href="https:/www.youtube.com/"><img class="icon" src="./image/yt.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header id="header">
+            <div>
+                <img src="./image/ava2.jpg">
+                <h2> Compukter Servis</h2>
+            </div>
+            <p id="number">
+                +7(888)228 88 28
+            </p>
+            <button id="buttonHamburger">
+                <img src="./image/hamburger.png">
+            </button>
+        </header>
+
+        <aside class="scrollUp">
+            <a href="#header">
+                <img src="./image/scrollUp.png">
+            </a>
+        </aside>
+        <main>
+            <section id="sec1">
+                <h1>
+                    Неудобный сервис для Вашего Компуктера
+                </h1>
+                <img src="./image/111.jpg" width="400">
+                <p id="preview">
+                    <b>Компуктер Сервис</b> - медленный и неудобный сервис по ремонту и техническому обслуживанию Вашего компуктера.
+                </p>
+                <p id="rec">
+                    Гарантия на все виды услуг до 3х минут.<br> <br> Бесплатная логистика отсутствует.<br> <br> Китайские запчасти и аксессуары.<br> <br> Баснословная стоимость и сроки диагностики.
+                </p>
+                <button class="applicationButton">
+                    <a href="#application"> Оставить заявку</a>
+                </button>
+            </section>
+
+            <div class="slideShow">
+                <div class="view">
+                    
+                    <button class="left"> < </button>
+                    <div class="slides"></div>
+                    <button class="right"> > </button>
+                         
+                </div>
+                <div class="pagination">
+
+                </div>
+            </div>
+
+            <section>
+                <div>
+                    <h1 id="confidence">
+                        Доверьте свой комп профессионалам
+                    </h1>
+                    <ur>
+                        <li>
+                            Иногда предоставляем клиенту акт приема-передачи оборудования, а также оповещаем о статусе выполнения работ.
+                        </li>
+                        <li>
+                            Каждый комп проходит процедуру диагностики для выявления неисправностей, сроков ремонта и стоимости запчастей.
+                        </li>
+                        <li>
+                            Средний чек на ремонт компа в 2022 году составил 5000₽.
+                        </li>
+                        <li>
+                            Мы предоставляем услуги по подбору компа, под желаемый бюджет и задачи клиента.
+                        </li>
+                        <li>
+                            Проводим комплексное обучение по пользованию с выдачей сертификата.
+                        </li>
+                    </ur>
+                </div>
+                <div>
+                    <h1>
+                        Стоимость услуг
+                    </h1>
+                    <ur class="price" id="price">
+                        <li><label>Перепрошивка</label><span>от 1000 ₽</span></li>
+                        <li><label>Замена/ремонт корпусных элементов</label><span>от 1200 ₽</span></li>
+                        <li><label>Ремонт бортовых электронных модулей</label><span>от 2000 ₽</span></li>
+                        <li><label>Замена бортовых электронных модулей</label><span>от 1200 ₽</span></li>
+                        <li><label>Замена/Ремонт проводки и шлейфов</label><span>от 1200 ₽</span></li>
+                        <li><label>Чистка электронных модулей</label><span>1000 ₽</span></li>
+                    </ur>
+                    <button class="applicationButton">
+                        <a href="#application"> Оставить заявку</a>
+                    </button>
+                </div>
+                <div>
+                    <h1 id="application"> Оставьте заявку на ремонт компуктера</h1>
+                    <form action="/create-ticket">
+                        <span>
+                            <label for="name">Ваше имя:</label>
+                            <br>
+                            <input type="text" id="name">
+                        </span>
+                        <span>
+                            <label for="components">Установленные комплектующие:</label>
+                            <br>
+                            <textarea id="components"></textarea>
+                        </span>
+                        <span>
+                            <label for="problem">Опишите проблему:</label>
+                            <br>
+                            <textarea id="problem"></textarea>
+                        </span>
+                        <input type="submit" id="send">
+                        </input>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="firstColumn">
+                <img src="./image/ava2.jpg">
+                <p>
+                    ©  2021- 2023 Compukter Servis
+                </p>
+            </div>
+            <div class="secondColumn">
+                <h3>Compukter Servis</h3>
+                <a href="#header">Главная</a>
+                <a href="#confidence">Наши приемущества</a>
+                <a href="#price">Стоимость услуг</a>
+            </div>
+            <div class="thirdColumn">
+                <h3>Контакты:</h3>
+                <p>г. Тарков, Чеканная 14</p>
+                <div>
+                    <a href="https:/vk.com"><img class="icon" src="./image/vk.png"></a>
+                    <a href="https:/www.youtube.com/"><img class="icon" src="./image/yt.png"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

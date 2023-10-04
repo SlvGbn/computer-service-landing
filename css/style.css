@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0; /* внешние поля */
+    padding: 0; /* внутренние поля */
+    font-size: 1.2rem;
+    scroll-behavior: smooth;
+    font: italic small-caps bold 16px/2 cursive;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: MediumSlateBlue;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.icon {
+    width: 2em;
+    height: auto;
+}
+
+body::-webkit-scrollbar {
+    width: auto;               /* ширина всей полосы прокрутки */
+  }
+
+body::-webkit-scrollbar-track {
+    background: SlateBlue;        /* цвет зоны отслеживания */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: black;    /* цвет бегунка */
+    border-radius: 20px;       /* округлось бегунка */
+    border: 3px solid SlateBlue;  /* отступ вокруг бегунка */
+}

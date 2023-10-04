@@ -1,0 +1,36 @@
+.popup {
+    margin-left: 2px;
+    position: fixed;
+    left: 0;
+    width: 14vw;
+    bottom: 10vw;
+    z-index: 4;
+}
+
+.popup > button {
+    cursor: pointer;
+}
+
+.advertising {
+    background-color: MediumSlateBlue ;
+}
+
+.news {
+    background-color:Silver ;
+    margin-bottom: 1em;
+}
+
+.news p {
+    font-size: 1vw;
+}
+
+.news h3, .popup > button > h3{
+    font-size: 1vw;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.popup > button > img {
+    max-width: 13vw;
+}
+

@@ -1,0 +1,137 @@
+
+h1 {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.slideShow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.slideShow > .view {
+    display: flex;;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.slideShow > .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2em;
+    gap: 1em;
+
+}
+.pagination > button {
+    height: 1em;
+    width: 1em;
+    border-radius: 1em;
+    background-color: SlateBlue;
+    cursor: pointer;
+}
+
+.slides {
+    height: auto;
+    width: 85%;
+    overflow: hidden;
+}
+
+.slides img {
+    width: 100%;
+}
+
+section {
+    background-color: SlateBlue;
+    border-radius: 1em;
+}
+
+#sec1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sec1 > img {
+    max-height: 30vh;
+    max-width: 100%;
+}
+
+#sec1 > p {
+    text-align: center;
+}
+
+#sec1 > h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+main > section > p {
+    padding-left: 2em;
+}
+
+.price li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid MediumSlateBlue;
+}
+
+.view > button {
+    height: 2em;
+    width: 2em;
+    border-radius: 1em;
+    background-color: SlateBlue;
+    cursor: pointer;
+}
+
+.applicationButton {
+    margin: 0 auto;
+    display: block;
+    border-radius: 0.4em;
+    background-color: MediumSlateBlue;
+    height: 3rem;
+    width: auto;
+}
+
+.applicationButton a {
+    font-size: 0.8em;
+    padding: 0.5em;
+    color: black;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"], form textarea {
+    height: 11em;
+    width: 50%;
+    border-radius: 0.4em;
+    background-color: WhiteSmoke;
+}
+
+#name {
+    height: auto;
+}
+
+#preview {
+ padding: 1em;
+ 
+}
+
+#send {
+    border-radius: 0.4em;
+    background-color: WhiteSmoke;
+    margin-top: 1em;
+    padding: 0.5em;
+    color: black;
+    width: 7em;
+    display: flex;
+}

@@ -1,0 +1,36 @@
+header img {
+    width: 100%;
+    max-width: 4em;
+}
+
+#buttonHamburger {
+    background-color: MediumSlateBlue;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer
+}
+
+
+#buttonHamburger > img {
+    max-width: 2em;
+    
+}
+
+header > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#number {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

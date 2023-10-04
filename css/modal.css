@@ -1,0 +1,89 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000a;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.modal .menu {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    background-color: MediumSlateBlue;
+    position: fixed;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 2s;
+    height: 100vh;
+}
+
+@media (min-width: 1024px) {
+    .modal .menu {
+        width: 15vw;
+    }
+}
+
+.modal .menu.show {
+    transform: translateX(0%);
+}
+
+.menu > div > img {
+    width: 100%;
+    max-width: 4em;
+}
+
+.menu .head {
+    display: flex;
+    flex-direction: row;
+}
+
+#exit {
+    background-color: MediumSlateBlue;
+    border: none;
+    align-self: flex-end;
+    padding: 1em;
+    cursor: pointer
+}
+
+#exit > img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 2em;
+}
+
+.menu > a {
+    color: black;
+    margin-left: 1em;
+}
+
+.endMenu {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    margin-left: 1em;
+    margin-bottom: 2em;
+    margin-right: 1em;
+}
+
+.endMenu div {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.endMenu > div > a > img {
+    border-radius: 20%;
+}
+
+.endMenu > p {
+    font-size: 0.8em;
+}
+
+.spacer {
+    flex-grow: 1;
+}
