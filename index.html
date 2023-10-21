@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="Utf-8">
+        <meta name="viewport" content="width=device-width">
         <title>
             Компуктер Сервис
         </title>
@@ -12,6 +13,7 @@
         <link rel="stylesheet" href="./css/modal.css">
         <link rel="stylesheet" href="./css/popup.css">
         <link rel="stylesheet" href="./css/scrollUp.css">
+        <link rel="stylesheet" href="./css/media.css">
         <script>
             const imgPath = "./image/";
             const srcs = ["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg"];
@@ -43,41 +45,6 @@
                     if (number > srcs.length - 1) number = 0;
                     setSlide(number);
                 })
-
-              /*  Слава.пойтиПопить("пивко");
-                create - создать 
-                query - запрос
-                append - прибавить
-                add - добавить
-
-                row - ряд, строка
-                column - столбец
-                direction - направление
-                align - выравнивание
-                item - предмет, элемент
-                justify - распределить
-                gap - зазор
-
-                first - первый
-                second - второй
-                third - третий
-                forth - четвертый
-                fifth - пятый
-                one - один
-                two - два
-                three -три
-                four - четыре
-                five - пять 
-
-                постоянная ссылка класснаяКнопка = документ.создайЭлемент("кнопка");
-                потсоянная ссылка слайдШоу = документ.найтиПоСелектору("#слайдШоу");
-                слайдШоу.добавитьПотомка(класснаяКнопка);
-
-                берем ссылку
-                берем элемент
-                в ссылке создаем подвкладку в виде элемента выше
-                */
-
 
                 srcs.forEach( (s, i) => {
 
@@ -131,18 +98,7 @@
         </script>
     </head>
     <body>
-        <popup class="popup">
-            <button class="news" onclick="document.location='slvgbn.github.io/tarkov-news/'">
-                <h3>Новости Таркова</h3>
-                <p> Обсалютно бесплатный новостной ресурс!</p>
-                <p> У нас весело!</p>
-                <p> Присоединяйтесь к Нам, не пожалеете!</p>
-            </button>
-            <button class="advertising">
-                <h3>Здесь могла быть Ваша реклама!</h3>
-                <img src="./image/ava.jpg">
-            </button>
-        </popup>
+       
         <div class="modal">
             <div class="menu">
                 <button id="exit">
@@ -213,12 +169,25 @@
                 </div>
             </div>
 
+            <popup class="popup">
+                <a class="news" href="https://slvgbn.github.io/tarkov-news/">
+                    <h3>Новости Таркова</h3>
+                    <p> Обсалютно бесплатный новостной ресурс!</p>
+                    <p> У нас весело!</p>
+                    <p> Присоединяйтесь к Нам, не пожалеете!</p>
+                </a>
+                <a class="advertising">
+                    <h3>Здесь могла быть Ваша реклама!</h3>
+                    <img src="./image/ava.jpg">
+                </a>
+            </popup>
+
             <section>
                 <div>
                     <h1 id="confidence">
                         Доверьте свой комп профессионалам
                     </h1>
-                    <ur>
+                    <ul>
                         <li>
                             Иногда предоставляем клиенту акт приема-передачи оборудования, а также оповещаем о статусе выполнения работ.
                         </li>
@@ -234,20 +203,20 @@
                         <li>
                             Проводим комплексное обучение по пользованию с выдачей сертификата.
                         </li>
-                    </ur>
+                    </ul>
                 </div>
                 <div>
                     <h1>
                         Стоимость услуг
                     </h1>
-                    <ur class="price" id="price">
+                    <ul class="price" id="price">
                         <li><label>Перепрошивка</label><span>от 1000 ₽</span></li>
                         <li><label>Замена/ремонт корпусных элементов</label><span>от 1200 ₽</span></li>
                         <li><label>Ремонт бортовых электронных модулей</label><span>от 2000 ₽</span></li>
                         <li><label>Замена бортовых электронных модулей</label><span>от 1200 ₽</span></li>
                         <li><label>Замена/Ремонт проводки и шлейфов</label><span>от 1200 ₽</span></li>
                         <li><label>Чистка электронных модулей</label><span>1000 ₽</span></li>
-                    </ur>
+                    </ul>
                     <button class="applicationButton">
                         <a href="#application"> Оставить заявку</a>
                     </button>

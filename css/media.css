@@ -1,0 +1,66 @@
+
+@media (max-width: 1024px) {
+    body {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+
+
+
+@media (min-width: 1024px) {
+   
+   
+
+ 
+    .popup {
+        margin-left: 2px;
+        position: fixed;
+        left: 0;
+        width: 14vw;
+        bottom: 10vw;
+        z-index: 4;
+    }
+    
+
+    
+    .popup a {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        color: black;
+        overflow: hidden;
+        text-decoration: none;
+    }
+    
+    .popup > a > h3 {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 1vw;
+    }
+    
+    .news, .advertising {
+        border: 2px solid black;
+    }
+    
+    .news {
+        margin-bottom: 1vw;
+        background-color: silver;
+    }
+    
+    .news > p {
+        font-size: 1vw;
+        text-align: center;
+    }
+    
+    .popup > a > img {
+        max-width: 13vw;
+    }
+    
+    
+
+
+
+
+}

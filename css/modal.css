@@ -21,11 +21,7 @@
     height: 100vh;
 }
 
-@media (min-width: 1024px) {
-    .modal .menu {
-        width: 15vw;
-    }
-}
+
 
 .modal .menu.show {
     transform: translateX(0%);

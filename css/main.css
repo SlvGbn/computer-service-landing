@@ -79,6 +79,13 @@ main > section > p {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid MediumSlateBlue;
+    
+}
+
+@media (min-width: 1024px) {
+    .modal .menu {
+        width: 15vw;
+    }
 }
 
 .view > button {
@@ -119,6 +126,7 @@ form input[type="text"], form textarea {
 
 #name {
     height: auto;
+    padding: 1em 0;
 }
 
 #preview {
@@ -134,4 +142,12 @@ form input[type="text"], form textarea {
     color: black;
     width: 7em;
     display: flex;
+}
+
+ul > li {
+    display: flex;
+}
+
+ul {
+    overflow: hidden;
 }

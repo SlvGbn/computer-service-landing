@@ -1,36 +1,43 @@
 .popup {
     margin-left: 2px;
-    position: fixed;
-    left: 0;
-    width: 14vw;
     bottom: 10vw;
     z-index: 4;
 }
 
-.popup > button {
-    cursor: pointer;
+
+
+.popup a {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    color: black;
+    overflow: hidden;
+    text-decoration: none;
 }
 
-.advertising {
-    background-color: MediumSlateBlue ;
-}
-
-.news {
-    background-color:Silver ;
-    margin-bottom: 1em;
-}
-
-.news p {
-    font-size: 1vw;
-}
-
-.news h3, .popup > button > h3{
-    font-size: 1vw;
-    font-weight: 900;
+.popup > a > h3 {
+    text-align: center;
     text-decoration: underline;
 }
 
-.popup > button > img {
+.news, .advertising {
+    border: 2px solid black;
+}
+
+.news {
+    margin-bottom: 1vw;
+    background-color: silver;
+}
+
+.news > p {
+    text-align: center;
+}
+
+.popup > a > img {
     max-width: 13vw;
 }
 
+
+.advertising {
+    margin-bottom: 1vw;
+}
